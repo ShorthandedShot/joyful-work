@@ -1,0 +1,628 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  color: white;
+  background: black;
+  font: 13px ibm-plex-mono, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  overflow: overlay; /*THIS NEEDS TO BE TESTED*/
+  .mySlides {display: none}
+}
+
+img {
+  max-width:100%;
+  min-width: 10px;
+}
+
+h1 {
+  font-family: grover, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* SCROLLBAR SETTINGS */
+
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  /* background: linear-gradient(156deg, rgba(255,183,0,1) 0%, rgba(236,236,0,1) 31%, rgba(255,167,255,1) 100%); */
+  /* background: black; */
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  /* background-color: #bc1df1; */
+  /* background:  linear-gradient(156deg, rgba(255,183,0,1) 0%, rgba(236,236,0,1) 31%, rgba(255,167,255,1) 100%); */
+  background: black;
+  outline: 2px solid white;
+  outline-offset: -2px;
+  border-radius: 5px;
+}
+
+::selection {
+  background: yellow;
+  color: black;
+}
+
+.marquee {
+  width: 100%; /* the plugin works for responsive layouts so width is not necessary */
+
+  /* overflow: hidden; */
+}
+
+/* MAIN HEADER MARQUEE */
+
+.header {
+  background: #bc1df1;
+  /* background: black; */
+  width: 100vw;
+  height: 225px;
+  overflow: hidden;
+  padding: 25px 0px 15px 0;
+  /* margin-bottom: 25px; */
+  font-size: 28px;
+  /* text-transform: lowercase; */
+  font-family: grover, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  display: block;
+}
+
+/* FOR PROJECTS PAGE */
+.header2 {
+  background: black;
+}
+
+.link_header {
+color:white;
+}
+
+.link_header:hover{
+  color: #651082;
+  /* background-color: #bc1df1; */
+  background: linear-gradient(156deg, rgba(255,183,0,1) 0%, rgba(236,236,0,1) 31%, rgba(255,167,255,1) 100%);
+  /* font-family: grover, sans-serif;
+  font-weight: 700;
+  font-style: normal; */
+  outline: 2px solid #651082;
+  border-radius: 5px;
+}
+
+#flowers_purple{
+  color:#bc1df1;
+}
+
+#flowers_yellow {
+  color: yellow;
+}
+
+.rotate {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+/* INTRO DIALOG BOX + BUTTON */
+.ui-dialog {
+    position: fixed !important;
+    z-index: 9999999999999 !important;
+}
+
+.button {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 2px 20px;
+  font-family: grover, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
+  border-radius: 5px;
+  float: right;
+  margin: -5px 0px 0 0;
+}
+
+.button:hover {
+  color: #651082;
+  border: 1px solid #651082;
+  background: linear-gradient(156deg, rgba(255,183,0,1) 0%, rgba(236,236,0,1) 31%, rgba(255,167,255,1) 100%);
+}
+
+#intro1 a, p a {
+  color:#bc1df1;
+}
+
+#intro1 a:hover, p a:hover {
+  color: black;
+  background: yellow;
+}
+
+
+/* BOTTOM FOOTER MARQUEE */
+.footer {
+  position: fixed;
+  z-index: 99999;
+  margin: 25px auto; /* Will not center vertically and won't work in IE6/7. */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(255,183,0);
+  font-family: grover, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  font-size: 28px;
+  padding: 20px;
+  min-height: 60px;
+  width: auto;
+  color: #651082;
+  background: linear-gradient(156deg, rgba(255,183,0,1) 0%, rgba(236,236,0,1) 31%, rgba(255,167,255,1) 100%);
+}
+
+.footer a{
+  color: #651082;
+  color: #651082;
+  text-decoration: none;
+  text-align: center;
+  padding: 18px 15px;
+}
+
+.footer a:hover{
+  color: white;
+  background-color: #bc1df1;
+  font-family: grover, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  outline: 2px solid white;
+  border-radius: 5px;
+}
+
+/* .name {
+  color: #651082;
+  text-decoration: none;
+  text-align: center;
+  padding: 18px 15px;
+} */
+
+
+/* FOOTER FILLER SPACE - A BIT OF A WONKY WORKAROUND RN BUT IT WORKS*/
+.filler_footer {
+  display: block;
+  margin: 50px 0 0 0;
+  height: 100px;
+  width: 100%;
+  /* background: red; */
+  background: transparent;
+}
+
+/* CREATIVE PROJECTS PAGE */
+/* mainly just the container but also space for any creative project specific space items */
+
+.project_container {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(50px, 1fr));
+  grid-gap: 50px;
+  justify-items: center;
+  justify-content: center;
+  background: black;
+  padding: 30px 200px;
+  grid-auto-rows: 200px;
+  width: 100%;
+  height: auto;
+  /* overflow: overlay; */
+}
+
+.link_projects {
+  color: #bc1df1;
+}
+
+.link_projects :hover{
+  color: black;
+  background: yellow;
+}
+
+/* MAIN LANDING PAGE */
+/* mainly just the container but also space for any creative project specific space items */
+
+.main_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px,1fr));
+  grid-gap: 50px;
+  grid-auto-rows: 200px;
+  padding: 30px 250px 50px 250px;
+  width: 100%;
+  height: auto;
+  justify-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+  /* grid-template-rows: auto; */
+}
+
+/* GENERAL GRID ITEMS */
+/* still.. trying to figure out the best way to do this LMFAO */
+
+/* .item_vertical {
+  display: flex;
+  outline: 1px solid white;
+  width: 90%;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0px;
+} */
+
+.item {
+  display: flex;
+  /* background-color: red; */
+  outline: 1px solid white;
+  width: fit-content;
+  /* width: 100%; */
+  /* height: 100%; */
+  /* padding: 0px 50px; */
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.item_scroll{
+  display: flex;
+  /* max-width: 100%; */
+  height: auto;
+  padding: 20px 50px;
+  background-color: black;
+  outline: 1px solid white;
+  overflow: auto;
+  justify-content: center;
+  /* border-radius: 5px; */
+}
+
+.item_filler {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 20px 50px;
+  justify-content: center;
+  /* background: red; */
+}
+
+/* HOVER BOXES */
+/* css options for our hover boxes */
+
+.content span{
+  display: none;
+}
+
+.content:hover span{
+  display: block;
+  position: relative;
+  left: 10%;
+  /* bottom:50%; */
+  width:80%;
+  border:5px solid #BC1DF1;
+  background-color: yellow;
+  text-align: center;
+  padding:5px;
+  color: black;
+  margin-bottom: 5px;
+  text-align: center;
+
+}
+
+/* SUBMISSION TYPES */
+/* just in case there is specific css we want to apply to certain types of submissions */
+
+.photo img {
+  max-width: 100%;
+  max-height: 100%;
+  /* height: auto; */
+}
+
+.text {
+
+}
+
+/* GRID OPTIONS */
+/* ok y'all this is where it gets funky
+these classes determine how many blocks within a row/column that the object will take up
+the numbers at the end will correspond to how many rows/columns it will be
+i simplified this down from our previous labels bc it makes it easier with how many objects we have */
+
+/* GRID ROW END */
+
+.row_start {
+  grid-row-start: 1;
+}
+
+.row1{
+  grid-row-end: span 1;
+}
+.row2{
+  grid-row-end: span 2;
+}
+.row3, .row3-extended {
+  grid-row-end: span 3;
+}
+.row4, .row4-extended {
+  grid-row-end: span 4;
+}
+
+.row5 {
+  grid-row-end: span 5;
+}
+
+/* GRID COLUMN END */
+/* THESE CLASSES DETERMINE HOW WIDE EACH BOX ON THE CREATIVE PROJ PAGE IS. THE NUMBER CORRESPONDS WITH THE COLUMN WIDTH */
+
+.column_start {
+  grid-column-start: 1;
+}
+
+.column1 {
+    grid-column-end: span 1;
+}
+
+.column2 {
+    grid-column-end: span 2;
+}
+
+.column3 {
+  grid-column-end: span 3;
+}
+
+.column4 {
+  grid-column-end: span 4;
+}
+
+.column5 {
+  grid-column-end: span 5;
+}
+
+.column5 {
+  grid-column-end: span 6;
+}
+
+
+/* STICKY HEADERS*/
+/* : THERE ARE TWO VERSIONS;
+1. MAIN LANDING PAGE USES CSS ONLY
+2. CREATIVE PROJECTS USES FEEDIFY/JQUERY  */
+
+/* CSS ONLY */
+.followMeBar {
+  background: #bc1df1;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-family: grover, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 28px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.followMeBar.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+.followMeBar.fixed.absolute {
+  position: absolute;
+  width: 100%;
+}
+
+.topBar{
+    display:none;
+    /* background:red;
+    padding:2%;
+    position:fixed;top:0px;width:960%;     */
+}
+
+/* FEEDIFY CSS */
+.feedify .feedify-item {
+  position: relative;
+}
+.feedify .feedify-item .feedify-item-header {
+  z-index: 100;
+  transform: translate3d(0, 0, 0);
+}
+.feedify .feedify-item.fixed .feedify-item-header {
+  position: fixed;
+  top: 0;
+}
+
+.feedify .feedify-item.bottom .feedify-item-header {
+  position: absolute;
+  bottom: 0;
+}
+
+.feedify-item-header {
+  background: #bc1df1;
+  padding: 10px 20px;
+  color: #fff;
+  font-family: grover, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 28px;
+}
+
+/* RESPONSIVENESS RESPONSIVENESS RESPONSIVENESS */
+/* It got kind of funky with grids... which explains the wonky widths */
+
+@media screen and (max-width: 1200px) {
+
+  .main_wrapper {
+    grid-template-columns: repeat(2, minmax(200px,2fr));
+    padding: 20px 150px 50px 150px;
+    grid-gap: 25px 50px;
+  }
+
+  .item {
+    overflow: overlay;
+  }
+
+  .row3 {
+    grid-row-end: span 2;
+  }
+
+  .row3-extended {
+    grid-row-end: span 3;
+  }
+
+  .row4 {
+    grid-row-end: span 3;
+  }
+
+  .row4-extended{
+    grid-row-end: span 5;
+  }
+
+  .row5 {
+    grid-row-end: span 4;
+  }
+
+  .project_container {
+    padding: 30px 100px;
+  }
+
+  .followMeBar {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .button {
+    font-size: 28px;
+    /* float: none; */
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+
+  .main_wrapper {
+    /* grid-template-columns: repeat(1, minmax(200px,1fr)); */
+    /* padding: 20px 150px 50px 150px; */
+    grid-template-columns: repeat(1, minmax(100px,1fr));
+    padding: 20px 40px;
+  }
+
+  .project_container {
+    padding: 30px 40px;
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+  }
+
+  .item_filler {
+    display: none;
+  }
+
+
+  .row_start{
+    /* grid-row-end: span 2; */
+    grid-row-start: auto;
+    }
+
+  .column_start {
+    grid-column-start: SPAN 1;
+  }
+
+
+
+  .followMeBar {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .button {
+    font-size: 24px;
+    margin: 10px auto 0px auto;
+    float: none;
+  }
+
+  .column2, .column3, .column4, .column5 {
+    grid-column-end: auto;
+  }
+
+  .row2 {
+
+  }
+
+  .row3 {
+    grid-row-end: span 4;
+  }
+
+  .row3-extended {
+    grid-row-end: span 3;
+  }
+
+  .row4 {
+    grid-row-end: span 4;
+  }
+
+  .row4-extended {
+    grid-row-end: span 5;
+  }
+
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .main_wrapper {
+    /* grid-template-columns: repeat(1, minmax(100px,1fr));
+    padding: 20px 50px 50px 50px; */
+  }
+
+
+  /* .project_container {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(50px, 1fr));
+    grid-gap: 50px;
+    justify-items: center;
+    justify-content: center;
+    background: black;
+    padding: 30px 200px;
+    grid-auto-rows: 200px;
+    width: 100%;
+    height: auto;
+    overflow: overlay;
+  } */
+
+}
+
+/* TESTING TESTING TESTING */
+/* .test_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background: #BC1DF1;
+  background: red;
+} */
+
+
+/* .click-zoom input[type=checkbox] {
+  display: none
+}
+
+.click-zoom img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in
+}
+
+.click-zoom input[type=checkbox]:checked~img {
+  transform: scale(1.5, 1.5);
+  cursor: zoom-out
+} */

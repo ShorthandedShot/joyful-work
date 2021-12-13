@@ -267,6 +267,7 @@ color:white;
   border-radius: 5px;
   align-items: center;
   justify-content: center;
+  overflow: overlay;
 }
 
 .item_scroll{

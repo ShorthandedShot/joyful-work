@@ -18,6 +18,10 @@ img {
   min-width: 10px;
 }
 
+img:not([src]):not([srcset]) {
+  visibility: hidden;
+}
+
 h1 {
   font-family: grover, sans-serif;
   font-weight: 400;

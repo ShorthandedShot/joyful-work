@@ -65,7 +65,7 @@ h1 {
   background: #bc1df1;
   /* background: black; */
   width: 100vw;
-  height: 225px;
+  height: auto;
   overflow: hidden;
   padding: 25px 0px 15px 0;
   /* margin-bottom: 25px; */
@@ -75,6 +75,10 @@ h1 {
   font-weight: 700;
   font-style: normal;
   display: block;
+}
+
+.topBar {
+  display: hidden;
 }
 
 /* FOR PROJECTS PAGE */
@@ -393,46 +397,7 @@ i simplified this down from our previous labels bc it makes it easier with how m
 
 
 /* STICKY HEADERS*/
-/* : THERE ARE TWO VERSIONS;
-1. MAIN LANDING PAGE USES CSS ONLY
-2. CREATIVE PROJECTS USES FEEDIFY/JQUERY  */
-
-/* CSS ONLY */
-.followMeBar {
-  background: #bc1df1;
-  padding: 10px 20px;
-  position: relative;
-  z-index: 1;
-  color: #fff;
-  font-family: grover, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 28px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-}
-
-.followMeBar.fixed {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  box-sizing: border-box;
-  z-index: 0;
-}
-
-.followMeBar.fixed.absolute {
-  position: absolute;
-  width: 100%;
-}
-
-.topBar{
-    display:none;
-    /* background:red;
-    padding:2%;
-    position:fixed;top:0px;width:960%;     */
-}
+/* NOW ONLY USES FEEDIFY/JQUERY  */
 
 /* FEEDIFY CSS */
 .feedify .feedify-item {

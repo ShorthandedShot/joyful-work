@@ -874,6 +874,8 @@
         </div>
 
       </div>
+    </div>
+  </div>
 
   <!-- NAME -->
 
@@ -930,53 +932,19 @@
 
 
 <!-- SCRIPTS SCRIPTS SCRIPTS  -->
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="jquery.marquee.min.js"></script>
-    <script type="text/javascript" src="functions.js"></script>
-    <script type="text/javascript" src="feedify.min.js"></script>
-    <script type="text/javascript" src="jquery-ui.min.js"></script>
-    <!-- <script type="text/javascript" src="test.js"></script>-->
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.marquee.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/feedify.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/lazyload.min.js"></script>
 
     <script>
-          $(document).ready(function() {
-         var dialogOptions = {
-        autoOpen: false,
-        width: 400,
-        height: 500,
-        resizable: false,
-        };
-        $("#intro1").dialog(dialogOptions);
-
-        $("#toggle_intro").click(function() {
-        if(!$("#intro1").dialog("isOpen")) {
-          $("#intro1").dialog("open");
-        } else {
-          $("#intro1").dialog("close");
-        }
-        });
-
-        });
+    var lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+    // Your custom settings go here
+    });
     </script>
-
-
-    <script>
-    $(function() {
-$('.feedify').feedify();
-});
-    </script>
-
-    <script>
-      // Set the options globally
-      // to make LazyLoad self-initialize
-      window.lazyLoadOptions = {
-        // Your custom settings go here
-      };
-    </script>
-
-    <script
-    async
-    src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.5.0/dist/lazyload.min.js"
-  ></script>
   </body>
 
 </html>

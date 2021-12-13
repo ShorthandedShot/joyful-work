@@ -133,6 +133,7 @@ color:white;
   border-radius: 5px;
   float: right;
   margin: -5px 0px 0 0;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -319,6 +320,7 @@ color:white;
   color: black;
   margin-bottom: 5px;
   text-align: center;
+  z-index: 99999999;
 
 }
 

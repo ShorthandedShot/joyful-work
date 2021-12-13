@@ -33,15 +33,6 @@ $('.small-marquee').marquee({
   startVisible: true
 });
 
-//STICKY HEADER SLIDE DOWN/FADE OUT
-$(window).scroll(function() {
-if ($(this).scrollTop()>240) {
-$('.topBar').slideDown( 200, "linear");
-} else {
-$('.topBar').fadeOut(300, "linear");
-}
-});
-
 // STICKY HEADERS
 
 var stickyHeaders = (function() {
@@ -110,6 +101,15 @@ var stickyHeaders = (function() {
 
 $(function() {
   stickyHeaders.load($(".followMeBar"));
+});
+
+//STICKY HEADER SLIDE DOWN/FADE OUT
+$(window).scroll(function() {
+if ($(this).scrollTop()>240) {
+$('.topBar').slideDown( 200, "linear");
+} else {
+$('.topBar').fadeOut(300, "linear");
+}
 });
 
 // GRID RESIZE....

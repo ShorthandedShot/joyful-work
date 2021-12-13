@@ -43,7 +43,7 @@ $('.feedify').feedify();
 
 //STICKY HEADER SLIDE DOWN/FADE OUT
 $(window).scroll(function() {
-if ($(this).scrollTop()>240) {
+if ($(this).scrollTop()>220) {
 $('.topBar').fadeIn( 150, "linear");
 } else {
 $('.topBar').fadeOut(150, "linear");

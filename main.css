@@ -65,7 +65,7 @@ h1 {
   background: #bc1df1;
   /* background: black; */
   width: 100vw;
-  height: auto;
+  height: 225px;
   overflow: hidden;
   padding: 25px 0px 15px 0;
   /* margin-bottom: 25px; */
@@ -318,7 +318,7 @@ color:white;
   text-align: center;
   padding:5px;
   color: black;
-  margin-bottom: 5px;
+  margin: 10px 0px;
   text-align: center;
   z-index: 99999999;
 

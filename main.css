@@ -52,7 +52,6 @@ h1 {
 
 .marquee {
   width: 100%; /* the plugin works for responsive layouts so width is not necessary */
-
   /* overflow: hidden; */
 }
 

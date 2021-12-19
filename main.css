@@ -124,6 +124,7 @@ color:white;
 .button {
   background: transparent;
   color: white;
+  text-decoration: none;
   border: 1px solid white;
   padding: 2px 20px;
   font-family: grover, sans-serif;
@@ -132,8 +133,9 @@ color:white;
   font-size: 28px;
   border-radius: 5px;
   float: right;
-  margin: -5px 0px 0 0;
+  margin: auto 10px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .button:hover {
@@ -473,6 +475,11 @@ i simplified this down from our previous labels bc it makes it easier with how m
 
 @media screen and (max-width: 800px) {
 
+  .topBar {
+        text-align: center;
+        padding
+  }
+
   .main_wrapper {
     /* grid-template-columns: repeat(1, minmax(200px,1fr)); */
     /* padding: 20px 150px 50px 150px; */
@@ -501,8 +508,8 @@ i simplified this down from our previous labels bc it makes it easier with how m
 
 
 
-  .followMeBar {
-    font-size: 28px;
+  .topBar {
+    font-size: 24px;
     text-align: center;
   }
 
@@ -550,6 +557,10 @@ i simplified this down from our previous labels bc it makes it easier with how m
   .header {
     height: 240px;
     /* margin-bottom: 10px; */
+  }
+
+  #toTop {
+    margin-top: 20px;
   }
 
   /* .project_container {

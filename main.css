@@ -548,7 +548,7 @@ i simplified this down from our previous labels bc it makes it easier with how m
   }
 
   .header {
-    height: fit-content;
+    height: 240px;
     /* margin-bottom: 10px; */
   }
 

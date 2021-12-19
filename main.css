@@ -226,15 +226,6 @@ color:white;
   /* overflow: overlay; */
 }
 
-.link_projects {
-  color: #bc1df1;
-}
-
-.link_projects :hover{
-  color: black;
-  background: yellow;
-}
-
 /* MAIN LANDING PAGE */
 /* mainly just the container but also space for any creative project specific space items */
 
@@ -556,6 +547,9 @@ i simplified this down from our previous labels bc it makes it easier with how m
     padding: 20px 50px 50px 50px; */
   }
 
+  .header {
+    height: auto;
+  }
 
   /* .project_container {
     display: grid;

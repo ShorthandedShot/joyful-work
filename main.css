@@ -68,7 +68,6 @@ h1 {
   height: 225px;
   overflow: hidden;
   padding: 25px 0px 15px 0;
-  /* margin-bottom: 25px; */
   font-size: 28px;
   /* text-transform: lowercase; */
   font-family: grover, sans-serif;
@@ -78,7 +77,8 @@ h1 {
 }
 
 .topBar {
-  display: hidden;
+  display: none;
+
 }
 
 /* FOR PROJECTS PAGE */
@@ -548,7 +548,8 @@ i simplified this down from our previous labels bc it makes it easier with how m
   }
 
   .header {
-    height: auto;
+    height: fit-content;
+    /* margin-bottom: 10px; */
   }
 
   /* .project_container {

@@ -425,7 +425,7 @@ i simplified this down from our previous labels bc it makes it easier with how m
 /* RESPONSIVENESS RESPONSIVENESS RESPONSIVENESS */
 /* It got kind of funky with grids... which explains the wonky widths */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
 
   .main_wrapper {
     grid-template-columns: repeat(2, minmax(200px,2fr));
